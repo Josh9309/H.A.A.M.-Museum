@@ -32,7 +32,16 @@ public class CheckCollision : MonoBehaviour
 
         model = itemCanvas.GetComponentInChildren<MeshFilter>(); //Get the model
         modelTextureRenderer = model.GetComponent<Renderer>(); //Get the texture renderer
-        modelIdentity = FindObjectOfType<GameObject>(); //Get the model's identity
+
+        GameObject []gameobjectSearch = FindObjectsOfType<GameObject>(); //Get all the gameobjects
+
+        for (int i = 0; i < gameobjectSearch.Length; i++) //For all the gameobjects
+        {
+            if (gameobjectSearch[i].name == "ModelIdentity") //If the model identity has been found
+            {
+                modelIdentity = gameobjectSearch[i]; //Get the model's identity
+            }
+        }
 
         rotateModelScript = GetComponentInChildren<RotateModel>(); //Get the script
         fpsController = GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>(); //Get the first person controller
@@ -41,20 +50,24 @@ public class CheckCollision : MonoBehaviour
         itemCanvas.enabled = false; //Disable the item canvas
     }
 
-    void OnTriggerEnter(Collider coll) //Check for trigger stay
+    void OnTriggerStay(Collider coll) //Check for trigger stay
     {
         Trigger triggerScript = coll.GetComponent<Trigger>(); //Get the trigger script on the object
         itemTitle.text = triggerScript.ItemTitle; //Change the title text
         itemDescription.text = triggerScript.ItemDescription; //Change the description text
+
+        model.transform.rotation = coll.gameObject.transform.rotation; //Rotate the painting accordingly
 
         model.mesh = coll.GetComponent<MeshFilter>().mesh; //Get the model on the object
         modelTextureRenderer.material = coll.GetComponent<Renderer>().material; //Get the material on the object's texture renderer
 
         rotateModelScript.ShouldRotate = triggerScript.ShouldRotate; //Set if the model should rotate
 
+        rotateModelScript.RotateAroundX = triggerScript.RotateAroundX; //Set which axis to rotate around
+
         fpsController.M_MouseLook.YSensitivity = 0; //Stop the player from looking up or down
 
-        model.transform.position = new Vector3(modelIdentity.transform.position.x, modelIdentity.transform.position.y, modelIdentity.transform.position.z); //Move the model back into view
+        model.transform.position = modelIdentity.transform.position; //Move the model back into view
         itemCanvas.enabled = true; //Enable the item canvas
     }
 

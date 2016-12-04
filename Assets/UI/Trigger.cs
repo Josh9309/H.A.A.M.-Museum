@@ -5,6 +5,7 @@ using System.Collections;
 public class Trigger : MonoBehaviour
 {
     [SerializeField] private bool shouldRotate; //If the model should rotate
+    [SerializeField] private bool rotateAroundX; //What axis to rotate around
     [SerializeField] private string itemTitle; //The item's title
     [SerializeField] private string itemDescription; //The item's 
 
@@ -13,6 +14,14 @@ public class Trigger : MonoBehaviour
         get
         {
             return shouldRotate; //Return shouldRotate
+        }
+    }
+
+    public bool RotateAroundX //RotateAroundX property
+    {
+        get
+        {
+            return rotateAroundX; //Return rotateAroundX
         }
     }
 
