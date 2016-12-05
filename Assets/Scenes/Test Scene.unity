@@ -171,7 +171,7 @@ MonoBehaviour:
   shouldRotate: 1
   rotateAroundX: 0
   itemTitle: Hatchet Lady
-  itemDescription: She was a crazy one, always ready to hatchet a bitch.
+  itemDescription: She was a crazy one
 --- !u!135 &607168031
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class Trigger : MonoBehaviour
     [SerializeField] private bool shouldRotate; //If the model should rotate
     [SerializeField] private bool rotateAroundX; //What axis to rotate around
     [SerializeField] private string itemTitle; //The item's title
-    [SerializeField] private string itemDescription; //The item's 
+    [SerializeField] private string itemDescription; //The item's description
 
     public bool ShouldRotate //ShouldRotate property
     {
