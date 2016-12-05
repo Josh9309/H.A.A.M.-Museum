@@ -40,9 +40,4 @@ public class Trigger : MonoBehaviour
             return itemDescription; //Return itemDescription
         }
     }
-
-    void Start() //Use this for initialization
-    {
-        GetComponent<SphereCollider>().radius *= 2; //Adjust the size of the trigger
-    }
 }
