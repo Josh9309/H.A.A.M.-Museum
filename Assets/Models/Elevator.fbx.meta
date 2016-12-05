@@ -12,6 +12,9 @@ ModelImporter:
     100008: LeftDoor
     100010: RightDoor
     100012: ElevatorBox
+    100014: Elevator_box
+    100016: Left_door
+    100018: Right_door
     400000: //RootNode
     400002: Elevator
     400004: pCube1
@@ -19,6 +22,9 @@ ModelImporter:
     400008: LeftDoor
     400010: RightDoor
     400012: ElevatorBox
+    400014: Elevator_box
+    400016: Left_door
+    400018: Right_door
     2300000: //RootNode
     2300002: Elevator
     2300004: pCube1
@@ -26,6 +32,9 @@ ModelImporter:
     2300008: LeftDoor
     2300010: RightDoor
     2300012: ElevatorBox
+    2300014: Elevator_box
+    2300016: Left_door
+    2300018: Right_door
     3300000: //RootNode
     3300002: Elevator
     3300004: pCube1
@@ -33,12 +42,18 @@ ModelImporter:
     3300008: LeftDoor
     3300010: RightDoor
     3300012: ElevatorBox
+    3300014: Elevator_box
+    3300016: Left_door
+    3300018: Right_door
     4300000: Elevator
     4300002: pCube1
     4300004: pCube2
     4300006: LeftDoor
     4300008: RightDoor
     4300010: ElevatorBox
+    4300012: Right_door
+    4300014: Left_door
+    4300016: Elevator_box
     9500000: //RootNode
   materials:
     importMaterials: 1
