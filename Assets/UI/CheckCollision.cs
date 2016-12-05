@@ -69,12 +69,52 @@ public class CheckCollision : MonoBehaviour
 
     void OnTriggerStay(Collider coll) //Check for trigger stay
     {
-        if (coll.gameObject.name.Contains("Elevator")) //If the trigger is for the elevator
+        if (coll.gameObject.name.Contains("Elevator 1")) //If the trigger is for the 1st floor elevator
         {
             if (!interactionCanvas.enabled) //If the interaction canvas is disabled
             {
                 interactionCanvas.enabled = true; //Enable the interaction canvas
-                interactionMessage.text = "Press 1 for floor 1\nPress 2 for floor 2\nPress 3 for floor 3"; //Set the message text
+                interactionMessage.text = "Press 2 for floor 2\nPress 3 for floor 3"; //Set the message text
+            }
+            else if (interactionCanvas.enabled && Input.GetKey("2")) //If the interaction canvas is enabled and the player presses 2
+            {
+                transform.position = new Vector3(transform.position.x, 6.8071f, transform.position.z); //Move the player up
+            }
+            else if (interactionCanvas.enabled && Input.GetKey("3")) //If the interaction canvas is enabled and the player presses 3
+            {
+                transform.position = new Vector3(transform.position.x, 12.5271f, transform.position.z); //Move the player up
+            }
+        }
+        else if (coll.gameObject.name.Contains("Elevator 2")) //If the trigger is for the 2nd floor elevator
+        {
+            if (!interactionCanvas.enabled) //If the interaction canvas is disabled
+            {
+                interactionCanvas.enabled = true; //Enable the interaction canvas
+                interactionMessage.text = "Press 1 for floor 1\nPress 3 for floor 3"; //Set the message text
+            }
+            else if (interactionCanvas.enabled && Input.GetKey("1")) //If the interaction canvas is enabled and the player presses 1
+            {
+                transform.position = new Vector3(transform.position.x, 1.2071f, transform.position.z); //Move the player down
+            }
+            else if (interactionCanvas.enabled && Input.GetKey("3")) //If the interaction canvas is enabled and the player presses 3
+            {
+                transform.position = new Vector3(transform.position.x, 12.5271f, transform.position.z); //Move the player up
+            }
+        }
+        else if (coll.gameObject.name.Contains("Elevator 3")) //If the trigger is for the 3rd floor elevator
+        {
+            if (!interactionCanvas.enabled) //If the interaction canvas is disabled
+            {
+                interactionCanvas.enabled = true; //Enable the interaction canvas
+                interactionMessage.text = "Press 1 for floor 1\nPress 2 for floor 2"; //Set the message text
+            }
+            else if (interactionCanvas.enabled && Input.GetKey("1")) //If the interaction canvas is enabled and the player presses 1
+            {
+                transform.position = new Vector3(transform.position.x, 1.2071f, transform.position.z); //Move the player down
+            }
+            else if (interactionCanvas.enabled && Input.GetKey("2")) //If the interaction canvas is enabled and the player presses 2
+            {
+                transform.position = new Vector3(transform.position.x, 6.8071f, transform.position.z); //Move the player up
             }
         }
         else //If the trigger is not an elevator
