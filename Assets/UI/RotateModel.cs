@@ -26,11 +26,11 @@ public class RotateModel : MonoBehaviour
     {
         if (shouldRotate && rotateAroundX) //If the model should rotate around the X axis
         {
-            gameObject.transform.Rotate(.25f, 0, 0); //Rotate the model
+            gameObject.transform.Rotate(.5f, 0, 0); //Rotate the model
         }
         else if (shouldRotate) //If the model should rotate around the Y axis
         {
-            gameObject.transform.Rotate(0, .25f, 0); //Rotate the model
+            gameObject.transform.Rotate(0, .5f, 0); //Rotate the model
         }
     }
 }

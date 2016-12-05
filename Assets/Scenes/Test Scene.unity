@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldRotate: 1
+  rotateAroundX: 0
   itemTitle: Hatchet Lady
   itemDescription: She was a crazy one, always ready to hatchet a bitch.
 --- !u!135 &607168031

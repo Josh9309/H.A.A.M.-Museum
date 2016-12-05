@@ -42,19 +42,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
-        public MouseLook M_MouseLook //M_MouseLook property
-        {
-            get
-            {
-                return m_MouseLook; //Get m_MouseLook
-            }
-
-            set
-            {
-                m_MouseLook = value; //Set the value of m_MouseLook
-            }
-        }
-
         // Use this for initialization
         private void Start()
         {

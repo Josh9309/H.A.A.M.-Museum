@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CheckCollision : MonoBehaviour
 {
+    private Canvas interactionCanvas; //The canvas displaying interaction information
     private Canvas itemCanvas; //The canvas displaying item information
     private UnityEngine.UI.Text itemTitle; //The item's title
     private UnityEngine.UI.Text itemDescription; //The item's description
@@ -14,7 +15,19 @@ public class CheckCollision : MonoBehaviour
 
     void Start() //Use this for initialization
     {
-        itemCanvas = GetComponentInChildren<Canvas>(); //Get the item canvas
+        Canvas []canvases = GetComponentsInChildren<Canvas>(); //Get the canvases
+
+        for (int i = 0; i < canvases.Length; i++) //For all the text elements
+        {
+            if (canvases[i].name == "Interaction")
+            {
+                interactionCanvas = canvases[i]; //Get the interaction canvas 
+            }
+            else if (canvases[i].name == "Item")
+            {
+                itemCanvas = canvases[i]; //Get the item canvas
+            }
+        }
 
         UnityEngine.UI.Text[] textElements = itemCanvas.GetComponentsInChildren<UnityEngine.UI.Text>(); //Get the UI text
 
@@ -47,38 +60,52 @@ public class CheckCollision : MonoBehaviour
         fpsController = GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>(); //Get the first person controller
 
         model.transform.position = new Vector3(model.transform.position.x, -100, model.transform.position.z); //Move the model real far away
+        interactionCanvas.enabled = false; //Disable the interaction canvas
         itemCanvas.enabled = false; //Disable the item canvas
     }
 
     void OnTriggerStay(Collider coll) //Check for trigger stay
     {
-        Trigger triggerScript = coll.GetComponent<Trigger>(); //Get the trigger script on the object
-        itemTitle.text = triggerScript.ItemTitle; //Change the title text
-        itemDescription.text = triggerScript.ItemDescription; //Change the description text
+        if (!interactionCanvas.enabled) //If the interaction canvas is disabled
+        {
+            interactionCanvas.enabled = true; //Enable the interaction canvas
 
-        model.transform.rotation = coll.gameObject.transform.rotation; //Rotate the painting accordingly
+            Trigger triggerScript = coll.GetComponent<Trigger>(); //Get the trigger script on the object
+            itemTitle.text = triggerScript.ItemTitle; //Change the title text
+            itemDescription.text = triggerScript.ItemDescription; //Change the description text
 
-        model.mesh = coll.GetComponent<MeshFilter>().mesh; //Get the model on the object
-        modelTextureRenderer.material = coll.GetComponent<Renderer>().material; //Get the material on the object's texture renderer
+            model.transform.rotation = coll.gameObject.transform.rotation; //Rotate the painting accordingly
 
-        rotateModelScript.ShouldRotate = triggerScript.ShouldRotate; //Set if the model should rotate
+            model.mesh = coll.GetComponent<MeshFilter>().mesh; //Get the model on the object
+            modelTextureRenderer.material = coll.GetComponent<Renderer>().material; //Get the material on the object's texture renderer
 
-        rotateModelScript.RotateAroundX = triggerScript.RotateAroundX; //Set which axis to rotate around
+            rotateModelScript.ShouldRotate = triggerScript.ShouldRotate; //Set if the model should rotate
 
-        fpsController.M_MouseLook.YSensitivity = 0; //Stop the player from looking up or down
+            rotateModelScript.RotateAroundX = triggerScript.RotateAroundX; //Set which axis to rotate around
+        }
+        else if (interactionCanvas.enabled && Input.GetButton("Fire1")) //If the interaction canvas is enabled and the player left clicks
+        {
+            fpsController.enabled = false; //Disable the player
 
-        model.transform.position = modelIdentity.transform.position; //Move the model back into view
-        itemCanvas.enabled = true; //Enable the item canvas
+            model.transform.position = modelIdentity.transform.position; //Move the model back into view
+            itemCanvas.enabled = true; //Enable the item canvas
+        }
+        else if (itemCanvas.enabled && Input.GetButton("Fire2")) //If the item canvas is enabled and the player right clicks
+        {
+            fpsController.enabled = true; //Enable the player
+
+            interactionCanvas.enabled = false; //Disable the interaction canvas
+
+            rotateModelScript.ShouldRotate = false; //Stop the model from rotating
+            model.transform.rotation = modelIdentity.transform.rotation; //Reset the model
+
+            model.transform.position = new Vector3(model.transform.position.x, -100, model.transform.position.z); //Move the model real far away
+            itemCanvas.enabled = false; //Disable the item canvas
+        }
     }
 
     void OnTriggerExit(Collider coll) //Check for trigger exit
     {
-        fpsController.M_MouseLook.YSensitivity = 2; //Let the player look up and down again
-
-        rotateModelScript.ShouldRotate = false; //Stop the model from rotating
-        model.transform.rotation = modelIdentity.transform.rotation; //Reset the model
-
-        model.transform.position = new Vector3(model.transform.position.x, -100, model.transform.position.z); //Move the model real far away
-        itemCanvas.enabled = false; //Disable the item canvas
+        interactionCanvas.enabled = false; //Disable the interaction canvas
     }
 }
