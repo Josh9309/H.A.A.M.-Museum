@@ -16,6 +16,7 @@ public class CheckCollision : MonoBehaviour
     private UnityStandardAssets.Characters.FirstPerson.FirstPersonController fpsController; //The first person controller
     private int currentElevator = -1; //The current elevator
     private int destinationElevator = -1; //The destination elevator
+    private GameObject[] floorLights = new GameObject[3]; //The lights on each floor
 
     void Start() //Use this for initialization
     {
@@ -72,7 +73,22 @@ public class CheckCollision : MonoBehaviour
             {
                 elevatorAnimators[2] = gameObjectSearch[i].GetComponent<Animator>(); //Get the third elevator's animator
             }
+            else if (gameObjectSearch[i].name.Contains("Lights 1")) //If the first floor lights have been found
+            {
+                floorLights[0] = gameObjectSearch[i]; //Get the first floor's lights
+            }
+            else if (gameObjectSearch[i].name.Contains("Lights 2")) //If the second floor lights have been found
+            {
+                floorLights[1] = gameObjectSearch[i]; //Get the first floor's lights
+            }
+            else if (gameObjectSearch[i].name.Contains("Lights 3")) //If the third floor lights have been found
+            {
+                floorLights[2] = gameObjectSearch[i]; //Get the first floor's lights
+            }
         }
+
+        floorLights[1].SetActive(false); //Disable the second floor lights
+        floorLights[2].SetActive(false); //Disable the third floor lights
 
         rotateModelScript = GetComponentInChildren<RotateModel>(); //Get the script
 
@@ -206,6 +222,9 @@ public class CheckCollision : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x, 12.5271f, transform.position.z); //Move the player up
             }
+
+            floorLights[currentElevator].SetActive(false); //Disable the lights from the previous floor
+            floorLights[destinationElevator].SetActive(true); //Enable the lights on the destination floor
 
             elevatorAnimators[destinationElevator].Play("Open Door"); //Play the door open animation
         }
