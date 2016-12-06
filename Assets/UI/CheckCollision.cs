@@ -11,12 +11,15 @@ public class CheckCollision : MonoBehaviour
     private MeshFilter model; //The model to render
     private Renderer modelTextureRenderer; //The model's texture renderer
     private GameObject modelIdentity; //The model's default position and rotation
+    private Animator[] elevatorAnimators = new Animator[3]; //The animators for the elevators
     private RotateModel rotateModelScript; //The script for rotating models
     private UnityStandardAssets.Characters.FirstPerson.FirstPersonController fpsController; //The first person controller
+    private int currentElevator = -1; //The current elevator
+    private int destinationElevator = -1; //The destination elevator
 
     void Start() //Use this for initialization
     {
-        Canvas []canvases = GetComponentsInChildren<Canvas>(); //Get the canvases
+        Canvas[] canvases = GetComponentsInChildren<Canvas>(); //Get the canvases
 
         for (int i = 0; i < canvases.Length; i++) //For all the text elements
         {
@@ -49,17 +52,30 @@ public class CheckCollision : MonoBehaviour
         model = itemCanvas.GetComponentInChildren<MeshFilter>(); //Get the model
         modelTextureRenderer = model.GetComponent<Renderer>(); //Get the texture renderer
 
-        GameObject []gameobjectSearch = FindObjectsOfType<GameObject>(); //Get all the gameobjects
+        GameObject[] gameObjectSearch = FindObjectsOfType<GameObject>(); //Get all the gameobjects
 
-        for (int i = 0; i < gameobjectSearch.Length; i++) //For all the gameobjects
+        for (int i = 0; i < gameObjectSearch.Length; i++) //For all the gameobjects
         {
-            if (gameobjectSearch[i].name == "ModelIdentity") //If the model identity has been found
+            if (gameObjectSearch[i].name == "ModelIdentity") //If the model identity has been found
             {
-                modelIdentity = gameobjectSearch[i]; //Get the model's identity
+                modelIdentity = gameObjectSearch[i]; //Get the model's identity
+            }
+            else if (gameObjectSearch[i].name.Contains("Elevator 1")) //If the first elevator has been found
+            {
+                elevatorAnimators[0] = gameObjectSearch[i].GetComponent<Animator>(); //Get the first elevator's animator
+            }
+            else if (gameObjectSearch[i].name.Contains("Elevator 2")) //If the second elevator has been found
+            {
+                elevatorAnimators[1] = gameObjectSearch[i].GetComponent<Animator>(); //Get the second elevator's animator
+            }
+            else if (gameObjectSearch[i].name.Contains("Elevator 3")) //If the third elevator has been found
+            {
+                elevatorAnimators[2] = gameObjectSearch[i].GetComponent<Animator>(); //Get the third elevator's animator
             }
         }
 
         rotateModelScript = GetComponentInChildren<RotateModel>(); //Get the script
+
         fpsController = GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>(); //Get the first person controller
 
         model.transform.position = new Vector3(model.transform.position.x, -100, model.transform.position.z); //Move the model real far away
@@ -69,12 +85,70 @@ public class CheckCollision : MonoBehaviour
 
     void OnTriggerStay(Collider coll) //Check for trigger stay
     {
-        if (coll.gameObject.name.Contains("Elevator")) //If the trigger is for the elevator
+        if (coll.gameObject.name.Contains("Elevator 1")) //If the trigger is for the 1st floor elevator
         {
             if (!interactionCanvas.enabled) //If the interaction canvas is disabled
             {
                 interactionCanvas.enabled = true; //Enable the interaction canvas
-                interactionMessage.text = "Press 1 for floor 1\nPress 2 for floor 2\nPress 3 for floor 3"; //Set the message text
+                interactionMessage.text = "Press 2 for floor 2\nPress 3 for floor 3"; //Set the message text
+            }
+            else if (interactionCanvas.enabled && Input.GetKey("2")) //If the interaction canvas is enabled and the player presses 2
+            {
+                currentElevator = 0; //Set the current elevator
+                destinationElevator = 1; //Set the destination elevator
+
+                elevatorAnimators[0].Play("Close Door"); //Play the door close animation
+            }
+            else if (interactionCanvas.enabled && Input.GetKey("3")) //If the interaction canvas is enabled and the player presses 3
+            {
+                currentElevator = 0; //Set the current elevator
+                destinationElevator = 2; //Set the destination elevator
+
+                elevatorAnimators[0].Play("Close Door"); //Play the door close animation
+            }
+        }
+        else if (coll.gameObject.name.Contains("Elevator 2")) //If the trigger is for the 2nd floor elevator
+        {
+            if (!interactionCanvas.enabled) //If the interaction canvas is disabled
+            {
+                interactionCanvas.enabled = true; //Enable the interaction canvas
+                interactionMessage.text = "Press 1 for floor 1\nPress 3 for floor 3"; //Set the message text
+            }
+            else if (interactionCanvas.enabled && Input.GetKey("1")) //If the interaction canvas is enabled and the player presses 1
+            {
+                currentElevator = 1; //Set the current elevator
+                destinationElevator = 0; //Set the destination elevator
+
+                elevatorAnimators[1].Play("Close Door"); //Play the door close animation
+            }
+            else if (interactionCanvas.enabled && Input.GetKey("3")) //If the interaction canvas is enabled and the player presses 3
+            {
+                currentElevator = 1; //Set the current elevator
+                destinationElevator = 2; //Set the destination elevator
+
+                elevatorAnimators[1].Play("Close Door"); //Play the door close animation
+            }
+        }
+        else if (coll.gameObject.name.Contains("Elevator 3")) //If the trigger is for the 3rd floor elevator
+        {
+            if (!interactionCanvas.enabled) //If the interaction canvas is disabled
+            {
+                interactionCanvas.enabled = true; //Enable the interaction canvas
+                interactionMessage.text = "Press 1 for floor 1\nPress 2 for floor 2"; //Set the message text
+            }
+            else if (interactionCanvas.enabled && Input.GetKey("1")) //If the interaction canvas is enabled and the player presses 1
+            {
+                currentElevator = 2; //Set the current elevator
+                destinationElevator = 0; //Set the destination elevator
+
+                elevatorAnimators[2].Play("Close Door"); //Play the door close animation
+            }
+            else if (interactionCanvas.enabled && Input.GetKey("2")) //If the interaction canvas is enabled and the player presses 2
+            {
+                currentElevator = 2; //Set the current elevator
+                destinationElevator = 1; //Set the destination elevator
+
+                elevatorAnimators[2].Play("Close Door"); //Play the door close animation
             }
         }
         else //If the trigger is not an elevator
@@ -117,10 +191,31 @@ public class CheckCollision : MonoBehaviour
                 itemCanvas.enabled = false; //Disable the item canvas
             }
         }
+
+        if (currentElevator != -1 && elevatorAnimators[currentElevator].GetCurrentAnimatorStateInfo(0).IsName("Idle Closed")) //If the elevator's doors are closed
+        {
+            if (destinationElevator == 0) //If the destination is the first floor
+            {
+                transform.position = new Vector3(transform.position.x, 1.2071f, transform.position.z); //Move the player down
+            }
+            else if (destinationElevator == 1) //If the destination is the second floor
+            {
+                transform.position = new Vector3(transform.position.x, 6.8071f, transform.position.z); //Move the player up
+            }
+            else if (destinationElevator == 2) //If the destination is the third floor
+            {
+                transform.position = new Vector3(transform.position.x, 12.5271f, transform.position.z); //Move the player up
+            }
+
+            elevatorAnimators[destinationElevator].Play("Open Door"); //Play the door open animation
+        }
     }
 
     void OnTriggerExit(Collider coll) //Check for trigger exit
     {
+        currentElevator = -1; //Reset the current elevator
+        destinationElevator = -1; //Reset the destination elevator
+
         interactionCanvas.enabled = false; //Disable the interaction canvas
     }
 }
