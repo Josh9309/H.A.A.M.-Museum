@@ -1749,19 +1749,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 88a8bef9f3e2250449177aa31d57c4a7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00095228956
+      value: 0.0009188347
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 88a8bef9f3e2250449177aa31d57c4a7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9751718
+      value: -0.9659254
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 88a8bef9f3e2250449177aa31d57c4a7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00021621579
+      value: -0.00024620106
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 88a8bef9f3e2250449177aa31d57c4a7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.2214475
+      value: 0.25881898
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 88a8bef9f3e2250449177aa31d57c4a7, type: 3}
       propertyPath: m_RootOrder
@@ -1777,7 +1777,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 088d6389c111fff489acfd5d22687501, type: 2}
     - target: {fileID: 400000, guid: 88a8bef9f3e2250449177aa31d57c4a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -154.563
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 88a8bef9f3e2250449177aa31d57c4a7, type: 3}
       propertyPath: m_LocalScale.y
@@ -6790,8 +6790,8 @@ MonoBehaviour:
   rotateAroundX: 0
   itemTitle: Art
   itemDescription: 
---- !u!135 &439958768
-SphereCollider:
+--- !u!65 &439958768
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -6800,8 +6800,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.028587, y: 3.8440616, z: 1.4902155}
+  m_Center: {x: 0.0005450725, y: 0, z: 3.0962327}
 --- !u!1 &441419353
 GameObject:
   m_ObjectHideFlags: 0
@@ -8328,8 +8328,8 @@ MonoBehaviour:
   rotateAroundX: 0
   itemTitle: Carry Nation
   itemDescription: 
---- !u!135 &543909913
-SphereCollider:
+--- !u!65 &543909913
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -8338,8 +8338,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.028587, y: 3.8440616, z: 1.9593681}
+  m_Center: {x: 0.0012043832, y: 0, z: 2.9561825}
 --- !u!65 &543909914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9311,7 +9311,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &638685215
 GameObject:
   m_ObjectHideFlags: 0
@@ -9875,8 +9875,8 @@ MonoBehaviour:
   rotateAroundX: 0
   itemTitle: The Womens Crusade
   itemDescription: 
---- !u!135 &662311039
-SphereCollider:
+--- !u!65 &662311039
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -9885,8 +9885,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.0285869, y: 3.8440616, z: 1.8573385}
+  m_Center: {x: 0.00023039569, y: 0, z: 2.937361}
 --- !u!65 &662311040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12743,8 +12743,8 @@ MonoBehaviour:
   itemDescription: The Womens Holy War is a painting in 1874 that was painted by Currier
     and Ives. The painting is used to represent how women at the time were leading
     the charge in the fight againist alcohol and for prohibtion.
---- !u!135 &859990284
-SphereCollider:
+--- !u!65 &859990284
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -12753,8 +12753,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.0285869, y: 3.8440616, z: 1.4925051}
+  m_Center: {x: 0.00032352193, y: 0.0000009536743, z: 2.885289}
 --- !u!65 &859990285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15768,8 +15768,8 @@ MonoBehaviour:
   rotateAroundX: 1
   itemTitle: Dank Drank
   itemDescription: So dank
---- !u!135 &1069601915
-SphereCollider:
+--- !u!65 &1069601915
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -15778,8 +15778,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.028587, y: 3.8440616, z: 1.1726149}
+  m_Center: {x: -0.000009536744, y: -0.0015115488, z: 3.901646}
 --- !u!65 &1069601916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16509,80 +16509,6 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &1144501172
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 94.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 6.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.5326752
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.070340455
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.83613276
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.110415146
-      objectReference: {fileID: 0}
-    - target: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1145783758
 GameObject:
   m_ObjectHideFlags: 0
@@ -16739,8 +16665,8 @@ MonoBehaviour:
   rotateAroundX: 0
   itemTitle: Bar of Destruction
   itemDescription: 
---- !u!135 &1150304039
-SphereCollider:
+--- !u!65 &1150304039
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -16749,8 +16675,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.0285869, y: 3.8440616, z: 1.878212}
+  m_Center: {x: -0.00024850367, y: -0.0000045578927, z: 4.3200517}
 --- !u!65 &1150304040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17265,7 +17191,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &1216171297
 GameObject:
   m_ObjectHideFlags: 0
@@ -18053,7 +17979,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_MouseLook.clampVerticalRotation
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
@@ -18830,8 +18760,8 @@ MonoBehaviour:
     the establishment. She was jailed multiple times, but when she was released she
     would continue to travel across the nation destroying drinking establishments.
     In a campaign that she called "Hatchetation".
---- !u!135 &1333261658
-SphereCollider:
+--- !u!65 &1333261658
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -18840,8 +18770,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.028587, y: 3.8440616, z: 1.5620911}
+  m_Center: {x: 0.0008715152, y: 0.0000009536743, z: 2.8882325}
 --- !u!65 &1333261659
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19245,7 +19175,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 24.761002, y: -60.226, z: -64.644005}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1 &1358906698
 GameObject:
   m_ObjectHideFlags: 0
@@ -20059,8 +19989,8 @@ MonoBehaviour:
     into the Effects of Spirituous Liquors on the Human Body and Mind" that disproved
     the belief that alcohol was good for your health. Which help convince many people
     that alcohol was not good for society.
---- !u!135 &1427064467
-SphereCollider:
+--- !u!65 &1427064467
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -20069,8 +19999,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.0285869, y: 3.8440616, z: 1.6678388}
+  m_Center: {x: -0.00016005032, y: 0, z: 2.773854}
 --- !u!65 &1427064468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21265,8 +21195,8 @@ MonoBehaviour:
   rotateAroundX: 0
   itemTitle: Benjamin Rush
   itemDescription: 
---- !u!135 &1511065244
-SphereCollider:
+--- !u!65 &1511065244
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -21275,8 +21205,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.0285869, y: 3.8440616, z: 1.5927138}
+  m_Center: {x: -0.0003236054, y: 0, z: 3.0693672}
 --- !u!65 &1511065245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21759,52 +21689,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1530842731}
   m_Mesh: {fileID: 4300002, guid: 72a42b1e2d8072947a9b84f28ce9774d, type: 3}
---- !u!1001 &1531463315
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 97.87082
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 9.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 15.387055
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.00000016292068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1536636164
 GameObject:
   m_ObjectHideFlags: 0
@@ -22900,8 +22784,8 @@ MonoBehaviour:
   rotateAroundX: 0
   itemTitle: Art
   itemDescription: 
---- !u!135 &1595234708
-SphereCollider:
+--- !u!65 &1595234708
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -22910,8 +22794,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.028587, y: 3.8440616, z: 1.5791969}
+  m_Center: {x: 0.00086250296, y: 0, z: 3.1629593}
 --- !u!1 &1596682447
 GameObject:
   m_ObjectHideFlags: 0
@@ -27451,8 +27335,8 @@ MonoBehaviour:
   rotateAroundX: 0
   itemTitle: Art
   itemDescription: 
---- !u!135 &1840720090
-SphereCollider:
+--- !u!65 &1840720090
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -27461,8 +27345,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.028587, y: 3.8440616, z: 1.4325337}
+  m_Center: {x: -0.00017390249, y: 0, z: 3.300022}
 --- !u!4 &1850604532 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010259448328, guid: 3b29ec765e653174487810bd31111887,
@@ -27735,7 +27619,7 @@ Transform:
   - {fileID: 1666164612}
   - {fileID: 1783898214}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &1867163241 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013909788876, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
