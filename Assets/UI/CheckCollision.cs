@@ -64,14 +64,17 @@ public class CheckCollision : MonoBehaviour
             else if (gameObjectSearch[i].name.Contains("Elevator 1")) //If the first elevator has been found
             {
                 elevatorAnimators[0] = gameObjectSearch[i].GetComponent<Animator>(); //Get the first elevator's animator
+                elevatorAnimators[0].Play("Open Door");
             }
             else if (gameObjectSearch[i].name.Contains("Elevator 2")) //If the second elevator has been found
             {
                 elevatorAnimators[1] = gameObjectSearch[i].GetComponent<Animator>(); //Get the second elevator's animator
+                elevatorAnimators[1].Play("Open Door");
             }
             else if (gameObjectSearch[i].name.Contains("Elevator 3")) //If the third elevator has been found
             {
                 elevatorAnimators[2] = gameObjectSearch[i].GetComponent<Animator>(); //Get the third elevator's animator
+                elevatorAnimators[2].Play("Open Door");
             }
             else if (gameObjectSearch[i].name.Contains("Lights 1")) //If the first floor lights have been found
             {
