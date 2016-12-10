@@ -915,26 +915,55 @@ Prefab:
       value: ArtFrame (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.428572
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.428572
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013909788876, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_Layer
-      value: 8
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23000012153905738, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 944b6a75fa7954845870b896109574b1, type: 2}
+      objectReference: {fileID: 2100000, guid: 4d5eefd20234ba340b6206e6ca45170f, type: 2}
+    - target: {fileID: 114000011355489618, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
+        type: 2}
+      propertyPath: rotateAroundX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011355489618, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
+        type: 2}
+      propertyPath: itemTitle
+      value: Prohibition Poster
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011355489618, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
+        type: 2}
+      propertyPath: itemDescription
+      value: Posters such as this one emphasized the dangers of alcohol usage and
+        were used to convince people to back prohibition.
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000010903370654, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
+        type: 2}
+      propertyPath: m_Center.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000010903370654, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 3.082547
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000010903370654, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 2.0000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000010903370654, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0.041277718
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000010903370654, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 3.999998
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
   m_IsPrefabParent: 0
@@ -4075,6 +4104,10 @@ Prefab:
     - target: {fileID: 1000013909788876, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
@@ -7633,43 +7666,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 485107485}
   m_Mesh: {fileID: 4300004, guid: 72a42b1e2d8072947a9b84f28ce9774d, type: 3}
---- !u!1 &492453505 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000013909788876, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
-    type: 2}
-  m_PrefabInternal: {fileID: 69341784}
 --- !u!4 &492453510 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
     type: 2}
   m_PrefabInternal: {fileID: 69341784}
---- !u!114 &492453511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 492453505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b1cd8694a4f37f45a09e5d1550b97d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shouldRotate: 1
-  rotateAroundX: 0
-  itemTitle: Anti Temprance League Propoganda
-  itemDescription: 
---- !u!65 &492453512
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 492453505}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.5, y: 3.8440616, z: 2}
-  m_Center: {x: -0.5, y: -1, z: 4}
 --- !u!1 &497999081
 GameObject:
   m_ObjectHideFlags: 0
@@ -8024,7 +8025,12 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d9aa4819fcc1f1546aeb5e9977752819, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114000011355489618, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &518975841
@@ -8689,9 +8695,9 @@ MonoBehaviour:
   shouldRotate: 1
   rotateAroundX: 0
   itemTitle: Bar of Destruction (1874)
-  itemDescription: 'The "Bar of Destruction" was made in March 1874 by Thomas Nast.
-    The Cartoon was used to portrays saloons as trying to lure men away from their
-    families and corrupting them.  '
+  itemDescription: The "Bar of Destruction" was made in March 1874 by Thomas Nast.
+    This cartoon was used to portray saloons as trying to lure men away from their
+    families and corrupt them.
 --- !u!65 &576495240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8858,25 +8864,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 150
-      objectReference: {fileID: 0}
     - target: {fileID: 1000013909788876, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
       propertyPath: m_Name
       value: 'Al Capone '
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.4285715
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013909788876, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 23000012153905738, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
         type: 2}
@@ -8884,12 +8874,8 @@ Prefab:
       value: 
       objectReference: {fileID: 2100000, guid: 69d63b32ab113b24a8f881c59d337af7, type: 2}
     - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.428571
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
@@ -9537,7 +9523,7 @@ MonoBehaviour:
     the time. He served in the Continental Army as the surgeon general during the
     American Revolution. In 1785 Dr. Rush published a pamphlet called "An Inquiry
     into the Effects of Spirituous Liquors on the Human Body and Mind" that disproved
-    the belief that alcohol was good for your health. Which help convince many people
+    the belief that alcohol was good for your health, which helped convince many people
     that alcohol was not good for society.
 --- !u!65 &644085635
 BoxCollider:
@@ -12552,6 +12538,10 @@ Prefab:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
   m_IsPrefabParent: 0
@@ -13832,9 +13822,9 @@ MonoBehaviour:
   shouldRotate: 1
   rotateAroundX: 0
   itemTitle: Womens Holy War (1874)
-  itemDescription: The Womens Holy War is a painting in 1874 that was painted by Currier
-    and Ives. The painting is used to represent how women at the time were leading
-    the charge in the fight againist alcohol and for prohibtion.
+  itemDescription: The Womens Holy War is a painting from 1874 that was painted by
+    Currier and Ives. This painting was used to represent how women at the time were
+    leading the charge in the fight againist alcohol and for prohibtion.
 --- !u!65 &918696508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14000,7 +13990,9 @@ Prefab:
       propertyPath: m_Name
       value: Boat Smuggle
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114000011355489618, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
+    - {fileID: 65000010903370654, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &940657512
@@ -15202,43 +15194,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42f4080d6ef91894b9d4be942bbcca8d, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1027948922 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000013909788876, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
-    type: 2}
-  m_PrefabInternal: {fileID: 1561238776}
 --- !u!4 &1027948927 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
     type: 2}
   m_PrefabInternal: {fileID: 1561238776}
---- !u!114 &1027948928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1027948922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b1cd8694a4f37f45a09e5d1550b97d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shouldRotate: 1
-  rotateAroundX: 1
-  itemTitle: Car Smuggling
-  itemDescription: 
---- !u!65 &1027948929
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1027948922}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.028587, y: 3.8440616, z: 3}
-  m_Center: {x: 1, y: 0, z: 4}
 --- !u!1 &1028485496
 GameObject:
   m_ObjectHideFlags: 0
@@ -16106,12 +16066,12 @@ MonoBehaviour:
   shouldRotate: 1
   rotateAroundX: 0
   itemTitle: Carry Nation
-  itemDescription: Carry Amelia Nation was born on November 25, 1864.  Carry Nation
+  itemDescription: Carry Amelia Nation was born on November 25, 1864. Carry Nation
     was a very strong advocate for prohibition during 1900's. She was famous for going
-    to saloons and establishment where alcohol was sold and using her hatchet to vandalize
-    the establishment. She was jailed multiple times, but when she was released she
-    would continue to travel across the nation destroying drinking establishments.
-    In a campaign that she called "Hatchetation".
+    to saloons and establishments where alcohol was sold and vandalizing them with
+    a hatchet. She was jailed multiple times, but when she was released she would
+    continue to travel across the nation destroying drinking establishments in a campaign
+    that she called "Hatchetation".
 --- !u!65 &1091064591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16713,19 +16673,13 @@ MonoBehaviour:
   shouldRotate: 1
   rotateAroundX: 0
   itemTitle: William McCoy
-  itemDescription: 
---- !u!65 &1169521638
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1169521631}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 3.8440616, z: 2}
-  m_Center: {x: 0.5, y: -1, z: 4}
+  itemDescription: William "Bill" McCoy was born in 1877 in Syracuse, New York. During
+    the time of Prohibition he was a successful rumrunner who used his 90ft scooner
+    to sail alcohol from Nassau in the Bahamas back to the United States. He was eventually
+    caught by the coast guard on November 24, 1973 and was given a sentence of 9 months
+    in jail. However most of his time was spent in a hotel thanks to a corrupt warden,
+    and when he was released he had signiifcant amount of money and retired comfortably.
+    He died December 30, 1948.
 --- !u!4 &1174138645 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010259448328, guid: 3b29ec765e653174487810bd31111887,
@@ -17801,7 +17755,7 @@ MonoBehaviour:
   itemTitle: Alcohol Destruction
   itemDescription: This is an image of the prohibition officers dumping out hundreds
     of gallons of alcohol at the begining of prohibitiom. At the begining of prohibition,
-    the prohibition officers would confiscate alcohol and dumped outside.
+    the prohibition officers would confiscate alcohol and dump it outside.
 --- !u!65 &1265675947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21943,34 +21897,30 @@ Prefab:
       propertyPath: m_Name
       value: Car Smuggling
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.428572
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013909788876, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 23000012153905738, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 85012a41acf411b49ba2d288182d7296, type: 2}
+      objectReference: {fileID: 2100000, guid: 449d5b06657bb5d4fa2667432c671623, type: 2}
     - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.428571
+    - target: {fileID: 114000011355489618, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
+        type: 2}
+      propertyPath: rotateAroundX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011355489618, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
+        type: 2}
+      propertyPath: itemTitle
+      value: Bootlegging Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011355489618, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
+        type: 2}
+      propertyPath: itemDescription
+      value: This image depicts prohibition officers confiscating alcohol from a crashed
+        car. The car was smuggling alcohol during the prohibition era.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
@@ -26615,43 +26565,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1806538230}
   m_Mesh: {fileID: 4300004, guid: 72a42b1e2d8072947a9b84f28ce9774d, type: 3}
---- !u!1 &1811389367 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000013909788876, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
-    type: 2}
-  m_PrefabInternal: {fileID: 595795641}
 --- !u!4 &1811389372 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5,
     type: 2}
   m_PrefabInternal: {fileID: 595795641}
---- !u!114 &1811389373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1811389367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b1cd8694a4f37f45a09e5d1550b97d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shouldRotate: 1
-  rotateAroundX: 1
-  itemTitle: Al Capone
-  itemDescription: 
---- !u!65 &1811389374
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1811389367}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4, y: 4, z: 2}
-  m_Center: {x: 0.5, y: 0, z: 4}
 --- !u!1 &1811777509
 GameObject:
   m_ObjectHideFlags: 0
@@ -27643,8 +27561,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldRotate: 1
   rotateAroundX: 1
-  itemTitle: Boat Smuggling
-  itemDescription: 
+  itemTitle: Bootlegging With Boats
+  itemDescription: This is an image of illegal alcoholic contraband that was stacked
+    on the deck of a boat siezed by the U.S. Coast Guard. During the era of prohibition
+    it was very common for bootleggers to use hidden compartments in boats to try
+    to smuggle alcohol into the United states.
 --- !u!65 &1867163248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27655,8 +27576,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 4, z: 2}
-  m_Center: {x: 0.5, y: 0, z: 4}
+  m_Size: {x: 2.865526, y: 2.9999998, z: 2}
+  m_Center: {x: -0.06724573, y: -0.000003337861, z: 4.000003}
 --- !u!1 &1872696375
 GameObject:
   m_ObjectHideFlags: 0
@@ -30226,6 +30147,10 @@ Prefab:
     - target: {fileID: 1000013909788876, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011665953554, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec60840d55c9c243a4ae7b7a687c0c5, type: 2}
