@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof (SphereCollider))] //Require a sphere collider
+[RequireComponent (typeof (Collider))] //Require a sphere collider
 public class Trigger : MonoBehaviour
 {
     [SerializeField] private bool shouldRotate; //If the model should rotate

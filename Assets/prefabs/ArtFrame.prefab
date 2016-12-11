@@ -23,7 +23,9 @@ GameObject:
   - 23: {fileID: 23000012153905738}
   - 95: {fileID: 95000012143133082}
   - 65: {fileID: 65000011556879970}
-  m_Layer: 0
+  - 65: {fileID: 65000010903370654}
+  - 114: {fileID: 114000011355489618}
+  m_Layer: 8
   m_Name: ArtFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,10 +38,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013909788876}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 92.05232, y: 9.69, z: -12.242619}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 19.141397, y: 3.4625049, z: -1.2512792}
+  m_LocalScale: {x: 1.428572, y: 1.428571, z: 1.428572}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -56,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ec1d0ca80c222424fbbe8ec680ac8801, type: 2}
+  - {fileID: 2100000, guid: 944b6a75fa7954845870b896109574b1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -79,6 +81,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013909788876}
   m_Mesh: {fileID: 4300000, guid: 88a8bef9f3e2250449177aa31d57c4a7, type: 3}
+--- !u!65 &65000010903370654
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013909788876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4, z: 2}
+  m_Center: {x: 0.5, y: 0, z: 4}
 --- !u!65 &65000011556879970
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -108,3 +122,25 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000011355489618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013909788876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1cd8694a4f37f45a09e5d1550b97d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shouldRotate: 1
+  rotateAroundX: 1
+  itemTitle: Al Capone
+  itemDescription: Alphonse Capone a.k.a. "Al Capone" was born on January 17, 1899
+    and was one of the most notorious crime bosses in history. Al Capone used organized
+    crime to gain profit and power during the age of prohibition. Capone gained control
+    of the Johnny Torrio's gang in 1925 and gained a reputation for being brutally
+    violent, as well as a skilled strategist and organizer. Capone was eventually
+    convicted of tax evasion and bootlegging. While in prison Capone developed dementia
+    and retired to palm island when he was released in November 1939. Capone died
+    on January 25th, 1947.
