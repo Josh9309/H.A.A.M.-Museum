@@ -2016,7 +2016,9 @@ MonoBehaviour:
   shouldRotate: 1
   rotateAroundX: 0
   itemTitle: Fiasco
-  itemDescription: 
+  itemDescription: This is a model of a modern rendition of the classic Italian way
+    to store and display wine. While historically they were used to preserve wine
+    for storage, today they merely are decorative.
 --- !u!65 &134485302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17060,8 +17062,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldRotate: 1
   rotateAroundX: 0
-  itemTitle: Jar
-  itemDescription: 
+  itemTitle: Whiskey Jar
+  itemDescription: This is the traditional way to store whiskey. This particular jar
+    was modeled after a more recent example from 1970.
 --- !u!65 &1127397361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18866,7 +18869,7 @@ Prefab:
     - target: {fileID: 23000013271851154, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 2}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -18919,6 +18922,16 @@ Prefab:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 108000014269912344, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 108000014269912344, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabParent: 0
@@ -26468,7 +26481,9 @@ MonoBehaviour:
   shouldRotate: 1
   rotateAroundX: 0
   itemTitle: Stein
-  itemDescription: 
+  itemDescription: This German beer stein is modeled after an antique from the 19th
+    century. The distinctive lids on steins originated in the late Middle Ages as
+    a way to keep dirt out of ones stein.
 --- !u!65 &1738733234
 BoxCollider:
   m_ObjectHideFlags: 0
